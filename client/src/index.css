@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root{
+  --tertiary: "#54D6BB";
+}
+*{
+    font-family: 'Montserrat', sans-serif;
+}
+/* width */
+::-webkit-scrollbar {
+    width: 5px;
+    display: none;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #0A192F; 
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #ffffff; 
+    border-radius: 20px;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+  }
+
+  /* Loader Animation */
+  .s{
+    animation: s 3s infinite;
+  }
+  .m{
+    animation: m 3s infinite;
+  }
+  .r{
+    animation: r 3s infinite;
+  }
+
+  @keyframes s{
+    0%{
+      opacity: 0.25;
+    }
+    25%{
+      opacity: 1;
+    }
+    50%{
+      opacity: 0.25;
+    }
+    75%{
+      opacity: 0.25;
+    }
+    100%{
+      opacity: 0.25;
+    }
+  }
+  @keyframes m{
+    0%{
+      opacity: 0.25;
+    }
+    25%{
+      opacity: 0.25;
+    }
+    50%{
+      opacity: 1;
+    }
+    75%{
+      opacity: 0.25;
+    }
+    100%{
+      opacity: 0.25;
+    }
+  }
+  @keyframes r{
+    0%{
+      opacity: 0.25;
+    }
+    25%{
+      opacity: 0.25;
+    }
+    50%{
+      opacity: 0.25;
+    }
+    75%{
+      opacity: 1;
+    }
+    100%{
+      opacity: 0.25;
+    }
+  }
+
+  /* .new{
+    color: #54D6BB;
+    transform: scale(2);
+    transition: .5s all;
+  } */
