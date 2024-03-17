@@ -7,7 +7,7 @@ const portfolioRoute = require("./routes/portfolioRoute");
 
 app.use(express.json());
 
-app.use("https://mern-portfolio-server.vercel.app/api/portfolio", portfolioRoute);
+app.use("/api/portfolio", portfolioRoute);
 app.get('/', (req, res)=>(res.status(200).json({ "message": "Hello World!"})))
 
 const port = process.env.PORT || 5000;
