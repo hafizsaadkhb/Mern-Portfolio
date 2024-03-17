@@ -47,5 +47,5 @@
   "devDependencies": {
     "tailwindcss": "^3.4.1"
   },
-  "proxy": "https://mern-portfolio-server.vercel.app"
+  "proxy": "https://mern-portfolio-server.vercel.app/"
 }
