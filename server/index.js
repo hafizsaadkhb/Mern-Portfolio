@@ -7,6 +7,13 @@ const dbConfig = require('./config/dbConfig');
 const portfolioRoute = require("./routes/portfolioRoute");
 
 app.use(express.json());
+app.use((req, res, next) => {
+  res.header('Access-Control-Allow-Origin', 'https://mern-portfolio-lemon.vercel.app');
+  res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept');
+  res.header('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, OPTIONS');
+  res.header('Access-Control-Allow-Credentials', 'true'); // Set to true when credentials are included in the request
+  next();
+});
 app.use(cors({
   origin: ["https://mern-portfolio-lemon.vercel.app"],
   methods: ["POST", "GET"],
