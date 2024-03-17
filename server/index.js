@@ -1,4 +1,5 @@
 const express = require("express");
+const cors = require("cors");
 const app = express();
 require("dotenv").config();
 const dbConfig = require('./config/dbConfig');
@@ -6,6 +7,11 @@ const dbConfig = require('./config/dbConfig');
 const portfolioRoute = require("./routes/portfolioRoute");
 
 app.use(express.json());
+app.use(cors({
+  origin: ["https://mern-portfolio-lemon.vercel.app/"],
+  methods: ["POST", "GET"],
+  credientials: true
+}))
 
 app.use("/api/portfolio", portfolioRoute);
 app.get('/', (req, res)=>(res.status(200).json({ "message": "Hello World!"})))
