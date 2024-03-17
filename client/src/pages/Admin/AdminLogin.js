@@ -13,7 +13,7 @@ function AdminLogin() {
   const login = async () => {
     try {
       dispatch(ShowLoading);
-      const response = await axios.post("api/portfolio/admin-login", user);
+      const response = await axios.post("/api/portfolio/admin-login", user);
       
       dispatch(HideLoading);
       response.data.password = "Password Protected"

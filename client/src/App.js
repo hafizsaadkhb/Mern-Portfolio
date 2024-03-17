@@ -22,7 +22,7 @@ function App() {
   const getPortfolioData = async () => {
     try {
       dispatch(ShowLoading());
-      const response = await axios.get("https://mern-portfolio-server.vercel.app/api/portfolio/get-portfolio-data");
+      const response = await axios.get("/api/portfolio/get-portfolio-data");
       dispatch(SetPortfolioData(response.data));
       dispatch(ReloadData(false));
       dispatch(HideLoading());

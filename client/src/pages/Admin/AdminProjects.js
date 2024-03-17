@@ -23,12 +23,12 @@ function AdminProjects() {
       dispatch(ShowLoading());
       let response;
       if (selectedItemForEdit) {
-        response = await axios.post("https://mern-portfolio-server.vercel.app/api/portfolio/update-project", {
+        response = await axios.post("/api/portfolio/update-project", {
           ...values,
           _id: selectedItemForEdit._id,
         });
       } else {
-        response = await axios.post("https://mern-portfolio-server.vercel.app/api/portfolio/add-project", values);
+        response = await axios.post("/api/portfolio/add-project", values);
       }
       dispatch(HideLoading());
       if (response.data.success) {
@@ -48,7 +48,7 @@ function AdminProjects() {
   const onDelete = async (item) => {
     try {
       dispatch(ShowLoading());
-      const response = await axios.post("https://mern-portfolio-server.vercel.app/api/portfolio/delete-project", {
+      const response = await axios.post("/api/portfolio/delete-project", {
         _id: item._id,
       });
       dispatch(HideLoading());
