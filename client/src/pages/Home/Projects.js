@@ -1,6 +1,7 @@
 import React from "react";
 import SectionTitle from "../../components/SectionTitle";
 import { useSelector } from "react-redux";
+import { Link } from "react-router-dom";
 
 function Projects() {
   const [selectedItemIndex, setSelectedItemIndex] = React.useState(0);
@@ -59,7 +60,9 @@ function Projects() {
           </p>
 
           <div className="order-5 col-start-3 col-end-6 row-span-1 flex justify-end p-5 items-center">
+            <Link to={projects[selectedItemIndex].link}>
             <button className="text-secondary w-28 h-8 border border-secondary">View</button>
+            </Link>
           </div>
         </div>
       </div>
